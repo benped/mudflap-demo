@@ -70,7 +70,7 @@ planeGeometry.translate(.131,-5,0)
 let minimizerButton = document.getElementById("min-logo");
 minimizerButton.addEventListener("click", () => {
   logoObject.clear()
-  let minimizerLogo = new THREE.TextureLoader().load('2019_MinimizerRegisteredOutlinedLogo.png')
+  let minimizerLogo = new THREE.TextureLoader().load('./logos/2019_MinimizerRegisteredOutlinedLogo.png')
   // let img = new THREE.TextureLoader().load( minimizerLogo );
   let planeMaterial = new THREE.MeshBasicMaterial( { map: minimizerLogo, transparent: true } );
   let logoPlane = new THREE.Mesh(planeGeometry, planeMaterial);
@@ -80,7 +80,7 @@ minimizerButton.addEventListener("click", () => {
 let highBarButton = document.getElementById("hbb-logo");
 highBarButton.addEventListener("click", () => {
   logoObject.clear()
-  let HBBLogo = new THREE.TextureLoader().load('HBB_Logo_blk.png')
+  let HBBLogo = new THREE.TextureLoader().load('./logos/HBB_Logo_blk.png')
   // let img = new THREE.TextureLoader().load( minimizerLogo );
   let planeMaterial = new THREE.MeshBasicMaterial( { map: HBBLogo, transparent: true } );
   let logoPlane = new THREE.Mesh(planeGeometry, planeMaterial);
