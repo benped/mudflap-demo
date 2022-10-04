@@ -4,7 +4,7 @@ import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import asphalt from "./textures/asphalt.jpeg";
 
 const scene = new THREE.Scene();
-scene.background = new THREE.Color("gray");
+// scene.background = new THREE.Color("light-gray");
 const camera = new THREE.PerspectiveCamera(
   75,
   window.innerWidth / window.innerHeight,
@@ -13,13 +13,13 @@ const camera = new THREE.PerspectiveCamera(
 );
 
 const renderer = new THREE.WebGLRenderer({alpha:true, antialias: true });
-renderer.setSize(window.innerWidth, window.innerHeight);
-document.body.appendChild(renderer.domElement);
+renderer.setSize(800, 800);
+document.getElementById(`can`).appendChild(renderer.domElement);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
 camera.position.set(40, 0, 0);
-camera.lookAt(new THREE.Vector3(0, 12, 9));
+camera.lookAt(new THREE.Vector3(0, 0, 0));
 
 controls.minDistance = 12;
 controls.maxDistance = 24;
