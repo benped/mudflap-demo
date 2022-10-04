@@ -1,7 +1,7 @@
 import "./style.css";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
-import asphalt from "./textures/asphalt.jpeg";
+import asphalt from "./public/textures/asphalt.jpeg";
 import { Object3D } from "three";
 
 const scene = new THREE.Scene();
@@ -27,7 +27,7 @@ controls.maxDistance = 24;
 
 controls.update();
 
-const texture = new THREE.TextureLoader().load("./textures/asphalt.jpeg");
+const texture = new THREE.TextureLoader().load("./public/textures/asphalt.jpeg");
 texture.wrapS = THREE.RepeatWrapping;
 texture.wrapT = THREE.RepeatWrapping;
 
@@ -70,7 +70,7 @@ planeGeometry.translate(.131,-5,0)
 let minimizerButton = document.getElementById("min-logo");
 minimizerButton.addEventListener("click", () => {
   logoObject.clear()
-  let minimizerLogo = new THREE.TextureLoader().load('./logos/2019_MinimizerRegisteredOutlinedLogo.png')
+  let minimizerLogo = new THREE.TextureLoader().load('./public/logos/2019_MinimizerRegisteredOutlinedLogo.png')
   // let img = new THREE.TextureLoader().load( minimizerLogo );
   let planeMaterial = new THREE.MeshBasicMaterial( { map: minimizerLogo, transparent: true } );
   let logoPlane = new THREE.Mesh(planeGeometry, planeMaterial);
@@ -80,7 +80,7 @@ minimizerButton.addEventListener("click", () => {
 let highBarButton = document.getElementById("hbb-logo");
 highBarButton.addEventListener("click", () => {
   logoObject.clear()
-  let HBBLogo = new THREE.TextureLoader().load('./logos/HBB_Logo_blk.png')
+  let HBBLogo = new THREE.TextureLoader().load('./public/logos/HBB_Logo_blk.png')
   // let img = new THREE.TextureLoader().load( minimizerLogo );
   let planeMaterial = new THREE.MeshBasicMaterial( { map: HBBLogo, transparent: true } );
   let logoPlane = new THREE.Mesh(planeGeometry, planeMaterial);
